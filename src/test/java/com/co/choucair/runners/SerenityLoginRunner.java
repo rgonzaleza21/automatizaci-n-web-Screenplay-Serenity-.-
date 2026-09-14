@@ -7,8 +7,9 @@ import org.junit.runner.RunWith;
 
 @RunWith(CucumberWithSerenity.class)
 @CucumberOptions(
-        features = "src/test/resources/features/serenityLogin.feature",
+        features = "src/test/resources/features",
         glue = "com.co.choucair.stepdefinitions",
+        tags = "@compras",
         snippets = CucumberOptions.SnippetType.CAMELCASE
 )
 public class SerenityLoginRunner {

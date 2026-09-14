@@ -1,5 +1,5 @@
 Feature: login test
-
+@compras
   Scenario Outline: testing the successful login
     Given the user is on the serenity demo page
     When attempts to log in
@@ -7,5 +7,5 @@ Feature: login test
       | <user> | <pass> |
     Then validate the text on screen <message>
     Examples:
-      | user  | pass     | message   |
-      | admin | serenity | Dashboard |
+      | user          | pass         | message  |
+      | standard_user | secret_sauce | Products |
