@@ -41,11 +41,13 @@ public class SerenityLoginStepDefinitions {
         OnStage.theActorCalled(ACTOR).wasAbleTo(Open.url(URL));
     }
 
-    @When("attempts to log in")
-    public void attemptsToLogIn(DataTable dataTable) {
-        OnStage.theActorInTheSpotlight().attemptsTo(
-                Login.onTheSite(UserLoombokData.setData(dataTable).get(0))
-        );
+    @When("attempts to log in with {string} and {string}")
+    public void attemptsToLogIn(String user, String pass) {
+        UserLoombokData userData = new UserLoombokData();
+                userData.setUser(user);
+                userData.setPass(pass);
+
+        OnStage.theActorInTheSpotlight().attemptsTo(Login.onTheSite(userData));
     }
 
     @Then("^validate the text on screen (.*)$")

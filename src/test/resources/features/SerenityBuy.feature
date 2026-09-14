@@ -3,12 +3,11 @@ Feature: Buy Test
   @compras
   Scenario Outline: testing the successful buy
     Given the user is on the serenity demo page
-    When attempts to log in
-    When attempts to log in with valid credentials
-
+    When logs in with valid credentials
+    And buys products
       | firstName   | lastName   | postalCode   | backpack   | bike   | YourCart   | Dispatched   |
       | <firstName> | <lastName> | <postalCode> | <backpack> | <bike> | <YourCart> | <Dispatched> |
-    Then validate the text on screen
+    Then validates the purchase message "<Dispatched>"
 
   Example:
   | firstName    | lastName       | postalCode  |YourCart|backpack|bike||Dispatched|
