@@ -13,23 +13,22 @@ public class SerenityBuy {
     public static final Target TXT_BikeLight = Target.the("txt")
             .located(By.xpath("//button[@id='add-to-cart-sauce-labs-bike-light']"));
     public static final Target TXT_Car = Target.the("txt")
-            .located(By.xpath("//a[@data-test='shopping-cart-link']"));
+            .located(By.xpath("//a[@class='shopping_cart_link']"));
     public static final Target TXT_YourCart = Target.the("txt")
-            .located(By.xpath("//span[@class='title' and @data-test='title' and text()='Your Cart']"));
+            .located(By.xpath("//span[@data-test='title']"));
     public static final Target TXT_checkout = Target.the("txt")
             .located(By.xpath("//button[@id='checkout']"));
-    public static final Target TXT_FirstName = Target.the("txt")
-            .located(By.xpath("//input[@id='first-name']"));
-    public static final Target TXT_LastName = Target.the("txt")
-            .located(By.xpath("//input[@id='last-name']"));
-    public static final Target TXT_Zip = Target.the("txt")
-            .located(By.xpath("//input[@id='postal-code']"));
+    public static final Target TXT_FirstName =
+            Target.the("First Name").located(By.id("first-name"));
+    public static final Target TXT_LastName =
+            Target.the("Last Name").located(By.id("last-name"));
+    public static final Target TXT_Zip =
+            Target.the("Zip").located(By.id("postal-code"));
     public static final Target TXT_Continue = Target.the("txt")
             .located(By.xpath("//input[@id='continue']"));
     public static final Target TXT_Finish = Target.the("txt")
             .located(By.xpath("//button[@id='finish']"));
-    public static final Target TXT_Dispatched = Target.the("txt")
-            .located(By.xpath("//h2[@data-test='complete-header']"));
+    public static final Target TXT_Dispatched =Target.the("mensaje compra").located(By.xpath("//h2[@data-test='complete-header']"));
     public static final Target TXT_Back = Target.the("txt")
             .located(By.xpath("//button[@data-test='back-to-products']"));
 }

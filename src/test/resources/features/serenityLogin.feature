@@ -1,5 +1,5 @@
 Feature: login test
-@compras
+@login
   Scenario Outline: testing the successful login
 
     Given the user is on the serenity demo page
