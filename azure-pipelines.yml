@@ -5,8 +5,7 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-- task: Maven@4
+- script: |
+    chmod +x gradlew
+    ./gradlew clean test
   displayName: 'Run Serenity Tests'
-  inputs:
-    mavenPomFile: 'pom.xml'
-    goals: 'clean verify'
