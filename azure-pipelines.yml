@@ -1,0 +1,11 @@
+trigger:
+- master
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+- script: |
+    chmod +x gradlew
+    ./gradlew clean test
+  displayName:  'Run Serenity  Tests'
