@@ -16,9 +16,12 @@ public class UserLoombokData {
     String postalCode;
     String backpack;
     String bike;
+    String yourCart;
+    String products;
+    String dispatched;
     // getters y setters
 
-    public static List<UserLoombokData> setData(DataTable table){
+    public static List<UserLoombokData> setData(DataTable table) {
         List<UserLoombokData> data = new ArrayList<>();
         List<Map<String, String>> mapList = table.asMaps();
         for (Map<String, String> map : mapList) {
@@ -43,31 +46,67 @@ public class UserLoombokData {
         this.pass = pass;
     }
 
-    public String getFirstName() {return firstName;}
-    public void setFirstName(String firstName) { this.firstName = firstName;
-    }
-    public String getLastName() {return lastName;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public void setLastName(String lastName) { this.lastName = lastName;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
 
-    public String getPostalCode() { return postalCode;
+    public String getLastName() {
+        return lastName;
     }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public String getPostalCode() {
+        return postalCode;
+    }
+
     public void setPostalCode(String postalCode) {
         this.postalCode = postalCode;
     }
 
-    public String getBackpack() {return backpack;
+    public String getBackpack() {
+        return backpack;
     }
 
-    public void setBackpack(String backpack) { this.backpack = backpack;
+    public void setBackpack(String backpack) {
+        this.backpack = backpack;
     }
 
-    public String getBike() { return bike;
+    public String getBike() {
+        return bike;
     }
 
-    public void setBike(String bike) {this.bike = bike;
+    public void setBike(String bike) {
+        this.bike = bike;
     }
 
-}
+    public String getYourCart() {
+        return yourCart;
+    }
+
+    public void setYourCart(String yourCart) {
+        this.yourCart = yourCart;
+    }
+
+    public String getProducts() {
+        return products;
+    }
+
+    public void setProducts(String products) {
+        this.products = products;
+    }
+    public String getDispatched() {
+        return dispatched;
+    }
+
+    public void setDispatched(String dispatched) {
+        this.dispatched = dispatched;
+    }
+    }
+

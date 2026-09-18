@@ -14,8 +14,10 @@ public class SerenityBuy {
             .located(By.xpath("//button[@id='add-to-cart-sauce-labs-bike-light']"));
     public static final Target TXT_Car = Target.the("txt")
             .located(By.xpath("//a[@class='shopping_cart_link']"));
+    public static final Target TXT_products = Target.the("txt")
+            .located(By.xpath("//span[text()='Products']"));
     public static final Target TXT_YourCart = Target.the("txt")
-            .located(By.xpath("//span[@data-test='title']"));
+            .located(By.xpath("//span[text()='Your Cart']"));
     public static final Target TXT_checkout = Target.the("txt")
             .located(By.xpath("//button[@id='checkout']"));
     public static final Target TXT_FirstName =
@@ -26,6 +28,8 @@ public class SerenityBuy {
             Target.the("Zip").located(By.id("postal-code"));
     public static final Target TXT_Continue = Target.the("txt")
             .located(By.xpath("//input[@id='continue']"));
+    public static final Target TXT_OVERVIEW = Target.the("Checkout Overview")
+            .located(By.xpath("//span[text()='Checkout: Overview']"));
     public static final Target TXT_Finish = Target.the("txt")
             .located(By.xpath("//button[@id='finish']"));
     public static final Target TXT_Dispatched =Target.the("mensaje compra").located(By.xpath("//h2[@data-test='complete-header']"));
