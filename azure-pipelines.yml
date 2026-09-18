@@ -7,5 +7,5 @@ pool:
 steps:
 - script: |
     chmod +x gradlew
-    ./gradlew clean test
-  displayName:  'Run Serenity  Tests'
+    ./gradlew clean test aggregate
+  displayName: 'Run Serenity Tests'
