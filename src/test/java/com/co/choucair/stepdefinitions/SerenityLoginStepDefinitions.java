@@ -31,9 +31,10 @@ public class SerenityLoginStepDefinitions {
     }
 
     @After
-    public static void CloseDriver() throws IOException, InterruptedException {
-        SerenityWebdriverManager.inThisTestThread().getCurrentDriver().quit();
-        KillBrowser.processes(List.of((SerenityWebdriverManager.inThisTestThread().getCurrentDriverName()).split(":")).get(0));
+    public static void CloseDriver() {
+        SerenityWebdriverManager.inThisTestThread()
+                .getCurrentDriver()
+                .quit();
     }
 
     @Given("the user is on the serenity demo page")
